@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html><head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class="title">microsoft</div>
+        <div class="subtitle">Recon-ng Reconnaissance Report</div>
+        <div class="link"><a href="http://www.recon-ng.com/" target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');" style="display: inline;"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');" style="display: none;"><p>[-] Summary</p><hr></a>
+<table id="summary" style="display: none;">
+<tbody><tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">2</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">1096</td></tr>
+<tr><td>contacts</td><td class="centered">90</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">0</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</tbody></table>
+</div><br>
+<div class="container">
+<a id="show-domains" href="javascript:showhide('domains');" style="display: inline;"><p>[+] Domains</p></a>
+<a id="hide-domains" href="javascript:showhide('domains');" style="display: none;"><p>[-] Domains</p><hr></a>
+<table name="table" id="domains" style="display: none;">
+<tbody><tr><th>domain</th><th>notes</th><th>module</th></tr>
+<tr><td>google.com</td><td>for demo</td><td>user_defined</td></tr>
+<tr><td>microsoft.com</td><td>for demo</td><td>user_defined</td></tr>
+</tbody></table>
+</div><br>
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');" style="display: inline;"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');" style="display: none;"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts" style="display: none;">
+<tbody><tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>notes</th><th>module</th></tr>
+<tr><td>188348-ipv4.farm.dprodmgd104.aa-rt.sharepoint.com.dual-spov-0006.spov-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>188348-ipv4mte.farm.dprodmgd104.aa-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>188348-ipv4mte.gr.global.aa-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>188348-ipv4mteg.farm.dprodmgd104.sharepointonline.com.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>189951-ipv4.farm.dprodmgd104.aa-rt.sharepoint.com.dual-spov-0006.spov-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>189951-ipv4mte.farm.dprodmgd104.aa-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>189951-ipv4mte.farm.dprodmgd104.sharepointonline.com.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>189951-ipv4mte.gr.global.aa-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>a.privatelink.msidentity.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>a134.g.akamai.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>account.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>account.msa.akadns6.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.Microsoft.com</td><td>23.209.89.69</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>accounts.microsoft.com</td><td>95.100.129.93</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin-portal.office.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.Microsoft.com</td><td>13.107.6.156</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.microsoft.com</td><td>13.107.6.156</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.Microsoft.com</td><td>20.59.118.181</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.microsoft.com</td><td>20.59.118.181</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.Microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.Microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>agent.microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>aisvnxtgateway-prod.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.Microsoft.com</td><td>152.199.19.160</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ajax.microsoft.com</td><td>152.199.19.160</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alerts.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>api.azurelbs.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>app-solutionshell-prod.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.177.18</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.177.81</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.177.145</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.147.38</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.147.39</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.147.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.147.34</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.Microsoft.com</td><td>20.190.177.17</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.177.17</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.147.38</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.147.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.177.145</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.177.18</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.147.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.147.34</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>applications.microsoft.com</td><td>20.190.147.39</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asha-next.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ashy-meadow-0b28bcb0f.azurestaticapps.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.Microsoft.com</td><td>13.107.42.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atlas.microsoft.com</td><td>13.107.42.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atod-g2.tm-4.office.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autod.ms-acdc-autod.office.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.Microsoft.com</td><td>52.98.20.168</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.Microsoft.com</td><td>52.98.18.40</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.Microsoft.com</td><td>52.98.22.24</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.microsoft.com</td><td>52.98.20.168</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.microsoft.com</td><td>52.98.18.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.microsoft.com</td><td>52.98.20.136</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.outlook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azsc-bingads-westus.westus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azure.bingads.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azureedge-t-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azurefd-t-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>azurelbs.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>b-0004.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>b-0005.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>b-0037.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bblqnhta.clienthubs.vidyard.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bbs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bbs.Microsoft.com</td><td>134.170.188.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bbs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bbs.microsoft.com</td><td>134.170.188.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.Microsoft.com</td><td>65.55.58.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.microsoft.com</td><td>65.55.58.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>billing.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>billing.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>billing.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>billing.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bing-techis.microsoft-falcon.io.b-0005.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.Microsoft.com</td><td>141.193.213.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.Microsoft.com</td><td>141.193.213.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.microsoft.com</td><td>141.193.213.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blogs.microsoft.com</td><td>141.193.213.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>broadcast.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>broadcast.Microsoft.com</td><td>209.240.199.60</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>broadcast.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>broadcast.microsoft.com</td><td>209.240.199.60</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build.Microsoft.com</td><td>40.112.243.51</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build.microsoft.com</td><td>20.119.16.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build2024-prod-eastus.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>build2024-prod-westus.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>buildapipublic.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>buy.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>buy.microsoft.com</td><td>134.170.48.87</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>buy.microsoft.com.cp.microsoft.com.nsatc.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>catalog.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>catalog.Microsoft.com</td><td>64.4.10.255</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>catalog.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>catalog.microsoft.com</td><td>64.4.10.255</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.Microsoft.com</td><td>2.19.24.156</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.designerapp.osi.office.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.microsoft.com</td><td>23.49.64.194</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.prod.designerapp.live.com.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cert.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cert.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cert.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cert.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>channels-microsoft-com.s-0006.s-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>channels.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>channels.Microsoft.com</td><td>52.113.194.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>channels.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>channels.microsoft.com</td><td>52.113.194.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cl.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cl.Microsoft.com</td><td>13.66.138.106</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cl.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cl.microsoft.com</td><td>13.66.138.106</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>class.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>class.Microsoft.com</td><td>40.112.243.105</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>class.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>class.microsoft.com</td><td>40.112.243.105</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>classapisvcprod.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cn.Microsoft.com</td><td>120.92.19.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cn.microsoft.com</td><td>120.92.19.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.microsoft.com</td><td>40.117.178.188</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.microsoft.com</td><td>20.41.17.212</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.microsoft.com</td><td>40.78.172.194</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>commerce.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>commerce.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>commerce.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>commerce.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>communities.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>communities.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>consumer.Microsoft.com</td><td>65.55.93.86</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>consumer.microsoft.com</td><td>65.55.93.86</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>courses.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>courses.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>courses.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>courses.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cs22.wpc.v0cdn.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>css.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>css.Microsoft.com</td><td>23.197.57.178</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>css.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>css.microsoft.com</td><td>104.83.129.137</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers-msft-dpdzauf2hhekf5ah.b02.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>customers.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cwap-nam1-runtime.routing.msappproxy.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cx.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cx.Microsoft.com</td><td>40.112.243.120</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demos.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demos.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demos.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demos.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>designer.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>designer.Microsoft.com</td><td>92.122.68.15</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.Microsoft.com</td><td>23.209.88.227</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.microsoft.com</td><td>104.83.134.124</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.Microsoft.com</td><td>23.209.88.227</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.com</td><td>104.83.134.124</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.com-c.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.com-c.edgekey.net.globalredir.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.Microsoft.com</td><td>23.209.88.227</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.microsoft.com</td><td>104.83.134.124</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>device.Microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>device.Microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>device.microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>device.microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>directory.Microsoft.com</td><td>131.107.115.87</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>directory.microsoft.com</td><td>131.107.115.87</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dlc-shim.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.Microsoft.com</td><td>23.50.176.93</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.microsoft.com</td><td>92.123.209.240</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.microsoft.com-c.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.microsoft.com-c.edgekey.net.globalredir.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>domains.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>download.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>download.Microsoft.com</td><td>23.209.89.182</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>download.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>download.microsoft.com</td><td>23.214.205.201</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>download.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dual-a-0001.a-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dual-spov-0006.spov-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e11290.dspg.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e12671.dscd.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e13630.dscb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e13678.dscb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e13678.dspb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e16604.g.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e1693.dscg.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e2921.dscb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e3765.dscb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e3843.dscb.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e3951.dsca.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e6828.g.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e8364.dscd.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e8819.g.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>e9412.b.akamaiedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>edu.Microsoft.com</td><td>136.147.129.27</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>edu.microsoft.com</td><td>136.147.129.27</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>email-reminder-redirect-site-rd-ayfhhhc4bqaae0hq.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>email.Microsoft.com</td><td>157.55.150.73</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>email.microsoft.com</td><td>157.55.150.73</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>empresas.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>empresas.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>empresas.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>empresas.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enable.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enable.Microsoft.com</td><td>157.55.129.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enable.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enable.microsoft.com</td><td>157.55.129.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>endpoint-c719306e-2345-490c-a891-32923dce09eb.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering-dqfbghbtcxcvhfb0.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineering.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enterprise.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enterprise.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enterprise.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>enterprise.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epgdata.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epgdata.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>es.Microsoft.com</td><td>20.99.242.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>es.microsoft.com</td><td>20.99.242.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>eventcatalog.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>eventcatalogprodafd-ehgshebkcvf0e6d5.b02.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>eventcatalogprodsecappservice.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>events.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>events.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>events.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>events.microsoft.com</td><td>20.49.104.24</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>example.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>exec.Microsoft.com</td><td>207.46.248.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>exec.microsoft.com</td><td>207.46.248.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fc6y67oygyo8.wpeproxy.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback-microsoft-com.a-0001.a-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.Microsoft.com</td><td>204.79.197.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.Microsoft.com</td><td>13.107.21.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.live.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.microsoft.com</td><td>204.79.197.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.microsoft.com</td><td>13.107.21.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feeds.Microsoft.com</td><td>65.55.57.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feeds.microsoft.com</td><td>65.55.57.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>find.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>find.Microsoft.com</td><td>52.156.98.239</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>find.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>find.microsoft.com</td><td>52.156.98.239</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>firstparty-azurefd-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>flow.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>flow.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>flow.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>flow.microsoft.com</td><td>13.107.246.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>flow.microsoft.com</td><td>13.107.213.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fms-prodp-s2s-core.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>forums.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>forums.Microsoft.com</td><td>65.52.103.99</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>forums.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>forums.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>forums.microsoft.com</td><td>65.52.103.99</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs-wildcard.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs-wildcard.microsoft.com.edgekey.net.globalredir.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs.Microsoft.com</td><td>23.45.70.28</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fs.microsoft.com</td><td>23.33.110.9</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.Microsoft.com</td><td>134.170.188.232</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.microsoft.com</td><td>134.170.188.232</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g-msn-com-nsatc.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g.Microsoft.com</td><td>13.74.129.92</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g.microsoft.com</td><td>68.219.88.225</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>g.msn.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ga.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gallery.Microsoft.com</td><td>207.46.28.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gallery.microsoft.com</td><td>207.46.28.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>games.Microsoft.com</td><td>207.46.166.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>games.microsoft.com</td><td>207.46.166.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gate.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gate.Microsoft.com</td><td>20.115.201.26</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gate.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gate.microsoft.com</td><td>20.115.201.26</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gate.westus2.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.Microsoft.com</td><td>131.107.16.142</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.Microsoft.com</td><td>131.107.16.143</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.microsoft.com</td><td>131.107.16.142</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.microsoft.com</td><td>131.107.16.143</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gcsprod-cveketa8b0f6fngw.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>genuine.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>global-web-build2024-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.Microsoft.com</td><td>23.45.69.166</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.microsoft.com</td><td>23.33.109.152</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>group.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>group.Microsoft.com</td><td>52.252.110.33</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>group.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>group.microsoft.com</td><td>52.161.1.92</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>groups.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>groups.Microsoft.com</td><td>52.252.110.33</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>groups.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>groups.microsoft.com</td><td>52.252.110.33</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest-gms-web-prod-usw.azureedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest-gms-web-prod-usw.ec.azureedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest.Microsoft.com</td><td>152.199.21.175</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>guest.microsoft.com</td><td>152.199.21.175</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>help.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>help.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>help.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>help.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>i.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>i.Microsoft.com</td><td>23.197.57.178</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>i.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>i.microsoft.com</td><td>104.120.127.184</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>i.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ia.Microsoft.com</td><td>157.56.107.173</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ia.microsoft.com</td><td>157.56.107.173</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>id.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>id.Microsoft.com</td><td>13.107.42.22</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>id.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>id.microsoft.com</td><td>13.107.42.22</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ideas.fabric.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ideas.fabric.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>im.Microsoft.com</td><td>131.107.1.75</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>im.microsoft.com</td><td>131.107.1.75</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>img.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>img.Microsoft.com</td><td>23.197.57.178</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>img.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>img.microsoft.com</td><td>104.120.127.184</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td>104.17.74.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td>104.17.73.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td>104.17.70.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td>104.17.72.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.Microsoft.com</td><td>104.17.71.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td>104.17.71.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td>104.17.70.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td>104.17.74.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td>104.17.73.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>info.microsoft.com</td><td>104.17.72.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>int.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>int.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>int.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>int.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>int.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.Microsoft.com</td><td>3.226.73.193</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.Microsoft.com</td><td>35.153.85.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.Microsoft.com</td><td>34.233.4.33</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.microsoft.com</td><td>34.233.4.33</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.microsoft.com</td><td>35.153.85.206</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jobs.microsoft.com</td><td>3.226.73.193</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jp.Microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jp.Microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jp.microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>jp.microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>l-0012.l-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>l-0013.l-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>labs.Microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>labs.Microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>labs.microsoft.com</td><td>134.170.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>labs.microsoft.com</td><td>134.170.185.46</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>linux.Microsoft.com</td><td>13.77.154.182</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>linux.microsoft.com</td><td>13.77.154.182</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists-e.tm-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.Microsoft.com</td><td>13.107.137.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.Microsoft.com</td><td>13.107.139.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.aa-rt.sharepoint.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.microsoft.com</td><td>13.107.137.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lists.microsoft.com</td><td>13.107.139.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lm-test-east-us.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>local.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>local.Microsoft.com</td><td>20.190.23.113</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>local.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>local.microsoft.com</td><td>20.190.23.113</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.149</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.146</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.85</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.22</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.84</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.Microsoft.com</td><td>20.190.177.147</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.149</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.147</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.82</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.19</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.85</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.23</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.microsoft.com</td><td>20.190.177.146</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.Microsoft.com</td><td>65.55.186.235</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.microsoft.com</td><td>65.55.186.235</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m3l38343je5e.wpeproxy.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m7983-11163.mail.icims.tools</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mac2.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail.Microsoft.com</td><td>157.58.197.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail.Microsoft.com</td><td>167.220.71.19</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail.microsoft.com</td><td>167.220.71.19</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail.microsoft.com</td><td>157.58.197.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail2.Microsoft.com</td><td>131.107.115.215</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail2.microsoft.com</td><td>131.107.115.215</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>main.dl.ms.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>makershellafdredirectprod-eec7eeftc6chcdgf.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>manage-pe.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>manage.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>manage.Microsoft.com</td><td>52.236.189.96</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>manage.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>manage.microsoft.com</td><td>52.236.189.96</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>management.family.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>management.family.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>map.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mapmicrosoft.azurelbs.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>maps.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mapsmicrosoft.azurelbs.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketing.Microsoft.com</td><td>207.46.242.110</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketing.microsoft.com</td><td>207.46.242.110</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketingsites-prod-enatfdbqbphtgfh7.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketingsites-prod.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketingsites-prod.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mavenfrontend-prod.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>media.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>media.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>media.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>media.microsoft.com</td><td>13.107.246.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>media.microsoft.com</td><td>13.107.213.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>member.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>member.Microsoft.com</td><td>23.209.89.69</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>member.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>member.microsoft.com</td><td>95.100.129.93</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mercury.Microsoft.com</td><td>131.253.40.155</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mercury.Microsoft.com</td><td>52.183.89.45</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mercury.microsoft.com</td><td>131.253.40.155</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mercury.microsoft.com</td><td>52.183.89.45</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>messenger.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mi.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>microsoftdemandcenter-ssl.mktoweb.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>microsoftlocal.wpengine.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mkto-sj120029.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mls-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.Microsoft.com</td><td>65.55.186.235</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.microsoft.com</td><td>65.55.186.235</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ms.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ms.Microsoft.com</td><td>52.184.251.130</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ms.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ms.microsoft.com</td><td>52.184.251.130</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mscomajax.vo.msecnd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>msdn-redirection-arfxbpadcbf7ajba.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>music.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>music.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>music.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>music.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.Microsoft.com</td><td>23.209.89.69</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.microsoft.com</td><td>95.100.129.93</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>nam.proxy-3.appproxy.msidentity.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.Microsoft.com</td><td>141.193.213.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.Microsoft.com</td><td>141.193.213.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.microsoft.com</td><td>141.193.213.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.microsoft.com</td><td>141.193.213.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newsfeeds.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newsfeeds.Microsoft.com</td><td>65.55.57.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newsfeeds.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newsfeeds.microsoft.com</td><td>65.55.57.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odin.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odin.Microsoft.com</td><td>52.137.97.207</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odin.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odin.microsoft.com</td><td>52.137.97.207</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odin.westus2.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>odinprod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>office.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>office.Microsoft.com</td><td>52.109.20.42</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>office.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>office.microsoft.com</td><td>52.109.20.42</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>officecdnmac.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>oneproject-prod-torus-frs-001.francesouth.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>oneproject-prod-torus-global-afd-transition.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>oneproject-prod-torus-global-m00.op.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>oneproject-prod-torus-uks-azsc-000.uksouth.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>online.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>open.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>open.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>open.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>open.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ops.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ops.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ops.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ops.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ops.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>orders.Microsoft.com</td><td>131.107.97.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>orders.microsoft.com</td><td>131.107.97.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>origin.mobile.ms.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>osiprod-scus-pineapple-100.southcentralus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>outlook.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.Microsoft.com</td><td>131.107.1.90</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.Microsoft.com</td><td>131.107.0.91</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.Microsoft.com</td><td>131.107.1.91</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.Microsoft.com</td><td>131.107.1.89</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.microsoft.com</td><td>131.107.0.91</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.microsoft.com</td><td>131.107.1.89</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.microsoft.com</td><td>131.107.1.90</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>owa.microsoft.com</td><td>131.107.1.91</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>part-0015.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>part-0028.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partner.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partner.Microsoft.com</td><td>95.101.159.116</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partner.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partner.microsoft.com</td><td>104.120.114.59</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partnerdelivery.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.Microsoft.com</td><td>66.119.150.176</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.microsoft.com</td><td>66.119.150.176</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pegasus.Microsoft.com</td><td>10.20.30.40</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pegasus.microsoft.com</td><td>10.20.30.40</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pexsucpeu02.westeurope.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pf-microsoft.msappproxy.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pf.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pf.Microsoft.com</td><td>52.149.215.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pf.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pf.microsoft.com</td><td>52.149.215.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pmc.partners.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pop.Microsoft.com</td><td>20.118.138.131</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal-office365-com.b-0004.b-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.Microsoft.com</td><td>13.107.6.156</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.processsimple.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portfolio.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portfolio.Microsoft.com</td><td>52.109.28.22</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portfolio.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portfolio.microsoft.com</td><td>52.109.72.21</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>powerbiideas.powerappsportals.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prda.aadg.msidentity.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prdf.aadg.msidentity.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prdsignup.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.Microsoft.com</td><td>23.209.89.203</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.microsoft.com</td><td>95.100.129.120</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prod.fs.microsoft.com.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prod.ocsa.live.com.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>prodstack.support.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project-afd-global.project.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project-prod-afd-hkaug8bxh5bpd5gv.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>project.microsoft.com</td><td>52.109.28.22</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>protection.office.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ps-prod-c6f7d3cqcugefygj.b02.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ps.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ps.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>public.Microsoft.com</td><td>131.107.1.70</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>public.microsoft.com</td><td>131.107.1.70</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.Microsoft.com</td><td>131.107.98.31</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.microsoft.com</td><td>131.107.98.31</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.partners.extranet.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ra.partners.extranet.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc-prod.afd.azureedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc-prod.azureedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rc.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rcs.Microsoft.com</td><td>20.69.127.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rcs.microsoft.com</td><td>20.69.127.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rd.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rd.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rd.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rd.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rd.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>redir.update.msft.com.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>redirect-msftdomains.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>remote.Microsoft.com</td><td>131.107.0.6</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>remote.microsoft.com</td><td>131.107.0.6</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute443.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute443.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>reroute443.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ris.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ris.Microsoft.com</td><td>213.199.139.250</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ris.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ris.microsoft.com</td><td>213.199.139.250</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rissys.partners.extranet.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rissys.partners.extranet.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rs.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rs.Microsoft.com</td><td>172.171.165.135</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rs.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rs.microsoft.com</td><td>172.171.165.135</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rss.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rsweb-prod-tm-us-central.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rsweb-prod-us-east-1.rsweb-prod-us-east-1-ase.p.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s-0006.s-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s-part-0036.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>scdn207ea.wpc.f0b2d.omegacdn.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>scus-100.ocsa.osi.office.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.Microsoft.com</td><td>2.18.31.96</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.Microsoft.com</td><td>2.18.31.113</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.microsoft.com</td><td>92.123.48.155</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.microsoft.com</td><td>92.122.225.233</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>search.msn.com.edgesuite.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.microsoft.com</td><td>20.49.104.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure2023-prod-eastus.azurewebsites.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>security.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>security.Microsoft.com</td><td>13.107.6.192</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>security.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>security.microsoft.com</td><td>13.107.6.192</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup-cseug8esd6f0h6fx.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>setup.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sharepoint.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shed.dual-low.part-0015.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shed.dual-low.part-0028.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shed.dual-low.s-part-0036.t-0009.t-msedge.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shopping.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shopping.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shopping.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shopping.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>signup.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>signup.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>signup.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>signup.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>signup.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sj18.mktossl.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>205.248.106.32</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>131.107.115.214</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>205.248.106.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>131.107.115.215</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>205.248.106.30</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.Microsoft.com</td><td>131.107.115.212</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>131.107.115.212</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>131.107.115.215</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>131.107.115.214</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>205.248.106.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>205.248.106.30</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>smtp.microsoft.com</td><td>205.248.106.32</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sni1gl.wpc.omegacdn.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.Microsoft.com</td><td>52.173.249.137</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.microsoft.com</td><td>52.173.249.137</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.Microsoft.com</td><td>141.193.213.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.Microsoft.com</td><td>141.193.213.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.microsoft.com</td><td>141.193.213.10</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>source.microsoft.com</td><td>141.193.213.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>star-azurefd-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>stat.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>stat.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>stat.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>stat.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>stat.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staticwebapps5acb33257c684edeb36f840bde3e7fd2.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>statvnext-prod-premiumcdn-ui-endpoint-dfaadsbwhcemg5fg.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.Microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.Microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.Microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.Microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.Microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.microsoft.com</td><td>20.70.246.20</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.microsoft.com</td><td>20.76.201.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.microsoft.com</td><td>20.112.250.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.microsoft.com</td><td>20.231.239.246</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.microsoft.com</td><td>20.236.44.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.microsoft.com</td><td>13.107.246.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>supplier.microsoft.com</td><td>13.107.213.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>support.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>support.Microsoft.com</td><td>23.209.88.156</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>support.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>support.microsoft.com</td><td>95.100.128.107</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.Microsoft.com</td><td>13.107.6.158</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.microsoft.com</td><td>13.107.6.158</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test.microsoft.com</td><td>13.107.246.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test.microsoft.com</td><td>13.107.213.56</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>test4152ausjipqa.dynamitecdn.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>titan.Microsoft.com</td><td>20.252.70.28</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>titan.microsoft.com</td><td>20.252.70.28</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tm-c719306e-2345-490c-a891-32923dce09eb.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tm-rc-prod-staticweb.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>transfer.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>transfer.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ts-microsoft.msappproxy.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ts.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ts.Microsoft.com</td><td>52.149.215.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ts.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ts.microsoft.com</td><td>52.149.215.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>uddi.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>uddi.Microsoft.com</td><td>207.46.248.108</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>uddi.microsoft.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>uddi.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>uddi.microsoft.com</td><td>207.46.248.108</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>update.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>update.Microsoft.com</td><td>20.109.209.108</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>update.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>update.microsoft.com</td><td>20.72.235.82</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>va.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>va.microsoft.com</td><td>185.27.134.150</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vc.Microsoft.com</td><td>52.247.195.121</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vc.Microsoft.com</td><td>52.246.248.185</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vc.microsoft.com</td><td>52.246.248.185</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vc.microsoft.com</td><td>52.247.195.121</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi-fe-glb-prod-fd.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi.Microsoft.com</td><td>13.107.246.64</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi.microsoft.com</td><td>13.107.246.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vi.microsoft.com</td><td>13.107.213.43</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.Microsoft.com</td><td>44.205.133.7</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.Microsoft.com</td><td>34.225.122.58</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.microsoft.com</td><td>54.159.216.31</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>videos.microsoft.com</td><td>44.217.9.76</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wallet.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wallet.Microsoft.com</td><td>52.176.153.12</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wallet.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wallet.microsoft.com</td><td>23.101.116.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-167-81de.westus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-167.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-221-59bb.westus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-221.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-249-a91c.westus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-bay-249.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-225-de81.eastus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-225.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-235-5a89.eastus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-235.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-335-6f1c.eastus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-335.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-blu-a272dd1d.sip.p.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-dm1-027.centralus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-dm1-027.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-mwh-045.sip.azurewebsites.windows.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>waws-prod-mwh-045.westus2.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>web-secure2023-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>web-store-eyfkgzgudfgwftdc.z01.azurefd.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>windows.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>windows.Microsoft.com</td><td>2.19.25.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>windows.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>windows.microsoft.com</td><td>104.120.121.162</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>windows.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wp.wpenginepowered.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.Microsoft.com</td><td>23.209.89.203</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.microsoft.com</td><td>95.100.129.120</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.microsoft.com-c-3.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.microsoft.com-c-3.edgekey.net.globalredir.akadns.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.tm.a.prd.aadg.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.tm.f.prd.aadg.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.tm.nam.proxy-3.appproxy.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wwwdev.Microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wwwdev.Microsoft.com</td><td>88.221.103.84</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wwwdev.microsoft.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wwwdev.microsoft.com</td><td>23.50.183.45</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wwwdev.microsoft.com.edgekey.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>xpay-wallet-agw.centralus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>xpay-wallet-atm-prod.trafficmanager.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>xpay-wallet-gateway.centralus.cloudapp.azure.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+</tbody></table>
+</div><br>
+<div class="container">
+<a id="show-contacts" href="javascript:showhide('contacts');" style="display: inline;"><p>[+] Contacts</p></a>
+<a id="hide-contacts" href="javascript:showhide('contacts');" style="display: none;"><p>[-] Contacts</p><hr></a>
+<table name="table" id="contacts" style="display: none;">
+<tbody><tr><th>first_name</th><th>middle_name</th><th>last_name</th><th>email</th><th>title</th><th>region</th><th>country</th><th>phone</th><th>notes</th><th>module</th></tr>
+<tr><td></td><td></td><td>Abuse</td><td>abuse@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Microsoft Abuse Contact</td><td>abuse@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>NOC for Network Operations</td><td>mattschmitt@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Project Cooper NOC</td><td>cooper-noc@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Hostmaster</td><td>hostmaster@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Microsoft Routing, Peering, and DNS</td><td>IOC@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>appnexus-abuse</td><td>xdr-abuse@microsoft.com</td><td>Whois contact</td><td>New York, NY</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Abuse for Network Operations</td><td>mattschmitt@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Admin for Network Operations</td><td>mattschmitt@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Technical for Network Operations</td><td>mattschmitt@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Microsoft Corporation</td><td>noc@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Powerset Network Operations</td><td>psdnsadm@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Powerset Network Operations</td><td>psnetops@microsoft.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>appnexus-ipadmin</td><td>xdr-ipadmin@microsoft.com</td><td>Whois contact</td><td>New York, NY</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>ALEX</td><td></td><td>MOORE</td><td>alexmoore@microsoft.com</td><td>Whois contact</td><td>Enfield</td><td>United Kingdom</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Adam</td><td></td><td>Randell</td><td>v-adran@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Alex</td><td></td><td>Moore</td><td>alexmoore@microsoft.com</td><td>Whois contact</td><td>Enfield, MIDDLESEX</td><td>United Kingdom</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Andrew</td><td></td><td>Kennedy</td><td>harveydan@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Andrew</td><td></td><td>Kennedy</td><td>willpudans@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Andrew</td><td></td><td>Kennedy</td><td>akennedy@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Arnold</td><td></td><td>de Leon</td><td>arnold@microsoft.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Avery</td><td></td><td>Kim</td><td>averykim@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>BILL</td><td></td><td>CLARK</td><td>biclar@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>BRAD</td><td></td><td>AUSTIN</td><td>brada@microsoft.com</td><td>Whois contact</td><td>Charlotte, NC</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Beth</td><td></td><td>Tennent</td><td>j-betht@microsoft.com</td><td>Whois contact</td><td>Issaquah, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Bill</td><td></td><td>Jump</td><td>billju@microsoft.com</td><td>Whois contact</td><td>Irving, TX</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Blake</td><td></td><td>Bisset</td><td>blake.bisset@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Bounsana</td><td></td><td>Keopradith</td><td>Bounk@Microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Brad</td><td></td><td>Hunt</td><td>jans@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Brian</td><td></td><td>Lehr</td><td>blehr@microsoft.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>CA</td><td></td><td>MOBILE</td><td>Russell.Penar@microsoft.com</td><td>Whois contact</td><td>Overland Park, KS</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>CHANDU</td><td></td><td>SURAPANENI</td><td>chandrasekhar.Surapaneni@microsoft.com</td><td>Whois contact</td><td>Chicago, IL</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>CHANDU</td><td></td><td>SURAPE</td><td>Chandrasekhar.Surapaneni@microsoft.com</td><td>Whois contact</td><td>San Jose, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Christina</td><td></td><td>Aadland</td><td>v-chrisa@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Dave</td><td></td><td>Macky</td><td>dmackeye@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>David</td><td></td><td>Peters</td><td>dpeters@microsoft.com</td><td>Whois contact</td><td>Puyallup, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>David</td><td></td><td>Kidd</td><td>v-dakidd@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Dawn</td><td></td><td>Bedard</td><td>dabedard@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Divya</td><td></td><td>Quamara</td><td>hostmasterbilling@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Doug</td><td></td><td>Wilson</td><td>dougwil@microsoft.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Enwei</td><td></td><td>Xie</td><td>enweix@microsoft.com</td><td>Whois contact</td><td>Bellevue, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Eric</td><td></td><td>Meyer</td><td>ericme@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Gene</td><td></td><td>Matthews</td><td>genem@microsoft.com</td><td>Whois contact</td><td>Richardson, TX</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>George</td><td></td><td>Wickersham</td><td>gewicker@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Greg</td><td></td><td>Heim</td><td>v-gheim@microsoft.com</td><td>Whois contact</td><td>Richardson, TX</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Hal</td><td></td><td>Carmichael</td><td>halcar@microsoft.com</td><td>Whois contact</td><td>Cupertino, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>IPHostmaster</td><td></td><td>IPHostmaster</td><td>iphostmaster@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>JC</td><td></td><td>Hamlin</td><td>jchamlin@microsoft.com</td><td>Whois contact</td><td>Bellevue, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>JO</td><td></td><td>BAKER</td><td>jolynb@microsoft.com</td><td>Whois contact</td><td>Tukwila, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Jason</td><td></td><td>Emery</td><td>v-jemery@microsoft.com</td><td>Whois contact</td><td>Englewood, CO</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Jeffery F</td><td></td><td>Mason</td><td>v-jmason@microsoft.com</td><td>Whois contact</td><td>Boca Raton, FL</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>John</td><td></td><td>Cortez</td><td>JOCORTEZ@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>John</td><td></td><td>Mazzella</td><td>john.123@microsoft.com</td><td>Whois contact</td><td>Dublin, OH</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Keith</td><td></td><td>Proctor</td><td>Keith.Proctor@microsoft.com</td><td>Whois contact</td><td>Carlsbad, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Kurt</td><td></td><td>Parent</td><td>kparent@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Larry</td><td></td><td>Picha</td><td>larryp@microsoft.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Lee</td><td></td><td>Butler</td><td>leebu@microsoft.com</td><td>Whois contact</td><td>Denver, CO</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Lloyd</td><td></td><td>Kim</td><td>Lloyd.kim@microsoft.com</td><td>Whois contact</td><td>Reston, VA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>MICHAEL</td><td></td><td>DE LEON</td><td>micde@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Mark</td><td></td><td>Jonas</td><td>mjonas@microsoft.com</td><td>Whois contact</td><td>Woodinville, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Markus</td><td></td><td>lankeit</td><td>mlankeit@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Matthew</td><td></td><td>Dunn</td><td>matthewd@microsoft.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Michael</td><td></td><td>McDaniel</td><td>mdm@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Michael</td><td></td><td>De Leon</td><td>micde@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Michael</td><td></td><td>de Leon</td><td>micde@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Michael</td><td></td><td>De Leon</td><td>v-micde@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Mukeshkumar</td><td></td><td>Beher</td><td>mukeshb@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>NATHAN</td><td></td><td>PETERSON</td><td>nathan.peterson@microsoft.com</td><td>Whois contact</td><td>West Des Moines, IA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Nicole</td><td></td><td>Kangas</td><td>nikang@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>PATRICK</td><td></td><td>HICKS</td><td>pahick@microsoft.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>PETER</td><td></td><td>LEE</td><td>peterle@microsoft.com</td><td>Whois contact</td><td>Tukwila, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Prachi</td><td></td><td>Singh</td><td>pracsin@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>ROCKY</td><td></td><td>ELLIS</td><td>renee@microsoft.com</td><td>Whois contact</td><td>West Des Moines, IA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Ram</td><td></td><td>Balakrishnan</td><td>rambala@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Robert</td><td></td><td>Lemons</td><td>rlemon@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Robert</td><td></td><td>Ferguson</td><td>robertfe@microsoft.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>SANDRA</td><td></td><td>WALLER</td><td>sandra.waller@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Sandra</td><td></td><td>Waller</td><td>sandra.waller@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Sandra</td><td></td><td>Waller</td><td>sawaller@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Scott</td><td></td><td>Rickelton</td><td>scottri@microsoft.com</td><td>Whois contact</td><td>Bothell, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Somesh</td><td></td><td>Chaturmohta</td><td>someshch@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Staci</td><td></td><td>Hestilow</td><td>rsegal@microsoft.com</td><td>Whois contact</td><td>Issaquah, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Steve</td><td></td><td>Bowman</td><td>stevebow@microsoft.com</td><td>Whois contact</td><td>Portland, OR</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Stewart</td><td></td><td>Le</td><td>stle@microsoft.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Stewart</td><td></td><td>Le</td><td>dngr-soe@microsoft.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Stewart</td><td></td><td>Le</td><td>dngrnet@microsoft.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Stewart</td><td></td><td>Le</td><td>drewd@microsoft.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Stewart</td><td></td><td>Le</td><td>andrewbr@microsoft.com</td><td>Whois contact</td><td>Palo Alto, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Tim</td><td></td><td>Chinn</td><td>v-timchi@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>nicholas</td><td></td><td>harland</td><td>nharland@microsoft.com</td><td>Whois contact</td><td>Redmond, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+</tbody></table>
+</div><br>
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: vishwa<br>Sun, Aug 18 2024 16:06:49</p>
+    </div>
+
+</body></html>
